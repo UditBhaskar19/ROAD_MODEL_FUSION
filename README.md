@@ -19,19 +19,15 @@ Road Model Fusion for AD/ADAS functions
 
 ## 2. High Level Design:-
 ### 2.1 Line Measurements To Line Track Association for Ego Lane Boundary Estimation :-
-![](https://github.com/UditBhaskar91/ROAD_MODEL_FUSION/blob/main/Visualization_and_Analysis/filesForReadme/1_a_Road_Fusion_hld.PNG)
-<br/>
+![](https://github.com/UditBhaskar91/ROAD_MODEL_FUSION/blob/main/Visualization_and_Analysis/filesForReadme/1a_Road_Fusion_hld.PNG)
 ### 2.2 Ego Lane Center Line Estimation :-
-![](https://github.com/UditBhaskar91/ROAD_MODEL_FUSION/blob/main/Visualization_and_Analysis/filesForReadme/1_b_Road_Fusion_hld.PNG)
-<br/>
+![](https://github.com/UditBhaskar91/ROAD_MODEL_FUSION/blob/main/Visualization_and_Analysis/filesForReadme/1b_Road_Fusion_hld.PNG)
 ### 2.3 Road Model Computation :-
-![](https://github.com/UditBhaskar91/ROAD_MODEL_FUSION/blob/main/Visualization_and_Analysis/filesForReadme/1_c_Road_Fusion_hld.PNG)
-<br/><br/>
+![](https://github.com/UditBhaskar91/ROAD_MODEL_FUSION/blob/main/Visualization_and_Analysis/filesForReadme/1c_Road_Fusion_hld.PNG)
 
 
 
 ## 3. High Level Fusion Architecture:-
-![](https://github.com/UditBhaskar91/ROAD_MODEL_FUSION/blob/main/Visualization_and_Analysis/filesForReadme/2_a_Road_Fusion_Architecture.PNG)
-<br/><br/>
+![](https://github.com/UditBhaskar91/ROAD_MODEL_FUSION/blob/main/Visualization_and_Analysis/filesForReadme/2a_Road_Fusion_Architecture.PNG)
 ## 4. Road Grid Parameterization:-
-![](https://github.com/UditBhaskar91/ROAD_MODEL_FUSION/blob/main/Visualization_and_Analysis/filesForReadme/2_b_Road_Grid.PNG)
+![](https://github.com/UditBhaskar91/ROAD_MODEL_FUSION/blob/main/Visualization_and_Analysis/filesForReadme/2b_Road_Grid.PNG)
