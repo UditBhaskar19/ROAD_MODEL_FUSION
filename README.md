@@ -1,7 +1,7 @@
 # ROAD_MODEL_FUSION
 Road Model Fusion for AD/ADAS functions
 ## 0. Introduction :-
-#### We have an array of camera sensors installed in front of the ego vehicle for ADAS/AD applications. The goal of this project is to estimate estimate the Road Model which includes Ego Lane Geometry and Road Grid
+#### We have an array of camera sensors installed in front of the ego vehicle for ADAS/AD applications. The goal of this project is to estimate the Road Model which includes Ego Lane Geometry and Road Grid
 ![](https://github.com/UditBhaskar91/ROAD_MODEL_FUSION/blob/main/Visualization_and_Analysis/Animated_Gifs/LaneLineMeasClothoidCroppedVideo.gif)
 **Fig 1 : (Inputs) Measurements : Ego Lane Boundary Camera detections in the form of Clothoid Parameters**
 <br/><br/>
