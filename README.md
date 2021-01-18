@@ -12,11 +12,10 @@ Road Model Fusion for AD/ADAS functions
 ### 1.1 Road Geometry (Ego Lane Center Line + Adjacent Lane Boundaries) :-
 ![](https://github.com/UditBhaskar91/ROAD_MODEL_FUSION/blob/main/Visualization_and_Analysis/Animated_Gifs/LaneLineFusionClothoidCroppedVideo.gif)
 ![](https://github.com/UditBhaskar91/ROAD_MODEL_FUSION/blob/main/Visualization_and_Analysis/Animated_Gifs/RoadModelClothoidCroppedVideo.gif)
+![](https://github.com/UditBhaskar91/ROAD_MODEL_FUSION/blob/main/Visualization_and_Analysis/Animated_Gifs/RoadModelGridCroppedVideo.gif)
 **Fig 1 : Ego Lane Center Line Estimation**
-<br/><br/>
 ![](https://github.com/UditBhaskar91/ROAD_MODEL_FUSION/blob/main/Visualization_and_Analysis/Animated_Gifs/RoadModelClothoidCroppedVideo.gif)
 **Fig 2 : Ego Lane Center Line Estimation + Adjacent Lane Boundaries**
-<br/><br/>
 ### 1.2 Road Grid (Ego Lane Center Line + Adjacent Lane Boundaries + History):-
 ![](https://github.com/UditBhaskar91/ROAD_MODEL_FUSION/blob/main/Visualization_and_Analysis/Animated_Gifs/RoadModelGridCroppedVideo.gif)
 **Fig 3 : Road Grid**
