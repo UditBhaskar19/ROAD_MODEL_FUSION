@@ -9,7 +9,7 @@ Road Model Fusion for AD/ADAS functions
 
 
 ## 1. Estimation Output :-
-### 1.1 Road Geometry (Ego Lane Boundary Line Fusion + Road Geometry + Road Grid) :-
+### 1.1 Road Model (Ego Lane Boundary Line Fusion + Road Geometry + Road Grid) :-
 ![](https://github.com/UditBhaskar91/ROAD_MODEL_FUSION/blob/main/Visualization_and_Analysis/Animated_Gifs/LaneLineFusionClothoidCroppedVideo.gif)
 ![](https://github.com/UditBhaskar91/ROAD_MODEL_FUSION/blob/main/Visualization_and_Analysis/Animated_Gifs/RoadModelClothoidCroppedVideo.gif)
 ![](https://github.com/UditBhaskar91/ROAD_MODEL_FUSION/blob/main/Visualization_and_Analysis/Animated_Gifs/RoadModelGridCroppedVideo.gif)
@@ -18,9 +18,20 @@ Road Model Fusion for AD/ADAS functions
 
 
 ## 2. High Level Design:-
-![](https://github.com/UditBhaskar91/OBJECT_TRACKING_MULTI_SENSOR_FUSION/blob/main/Visualization_and_Analysis/filesForReadme/0_b_fusion_archi_overview.PNG)
+### 2.1 Line Measurements To Line Track Association for Ego Lane Boundary Estimation :-
+![](https://github.com/UditBhaskar91/ROAD_MODEL_FUSION/blob/main/Visualization_and_Analysis/filesForReadme/1_a_Road_Fusion_hld.PNG)
 <br/>
-## 3. High Level Fusion Architecture:-
-![](https://github.com/UditBhaskar91/OBJECT_TRACKING_MULTI_SENSOR_FUSION/blob/main/Visualization_and_Analysis/filesForReadme/1a_high_level_archi.PNG)
-![](https://github.com/UditBhaskar91/OBJECT_TRACKING_MULTI_SENSOR_FUSION/blob/main/Visualization_and_Analysis/filesForReadme/1b_high_level_archi.PNG)
+### 2.2 Ego Lane Center Line Estimation :-
+![](https://github.com/UditBhaskar91/ROAD_MODEL_FUSION/blob/main/Visualization_and_Analysis/filesForReadme/1_b_Road_Fusion_hld.PNG)
+<br/>
+### 2.3 Road Model Computation :-
+![](https://github.com/UditBhaskar91/ROAD_MODEL_FUSION/blob/main/Visualization_and_Analysis/filesForReadme/1_c_Road_Fusion_hld.PNG)
 <br/><br/>
+
+
+
+## 3. High Level Fusion Architecture:-
+![](https://github.com/UditBhaskar91/ROAD_MODEL_FUSION/blob/main/Visualization_and_Analysis/filesForReadme/2_a_Road_Fusion_Architecture.PNG)
+<br/><br/>
+## 4. Road Grid Parameterization:-
+![](https://github.com/UditBhaskar91/ROAD_MODEL_FUSION/blob/main/Visualization_and_Analysis/filesForReadme/2_b_Road_Grid.PNG)
