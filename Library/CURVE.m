@@ -35,13 +35,13 @@ classdef CURVE
         end
         % ======================================================================================================================================================
         function [Xs, Ys, phi_s, Ks] = ClothoidToCartTaylorApprox(x0, y0, phi0, K0, K_hat, s, L)
-		    % Generate (x, y) coordinates in cartesian from a clothoid equation by 3rd order taylor series approximation
+            % Generate (x, y) coordinates in cartesian from a clothoid equation by 3rd order taylor series approximation
             % INPUT : x0, y0 : initial coordinates in meters
             %           phi0 : initial heading
             %             K0 : initial curvature
             %          K_hat : curvature rate
             %              L : curv length
-			%              s : interpolated curve lengths
+	    %              s : interpolated curve lengths
             % OUTPUT :    Xs : a vector of x coordinate
             %             Ys : a vector of Y coordinate
             %          phi_s : a vector of tangent angle
@@ -183,7 +183,7 @@ classdef CURVE
         end
         % ======================================================================================================================================================
         function PolyCoeff = LeastSquaresFit3rdDegreePolynomial(Xin, Yin)
-		    % 3rd Order polynimial curve fitting by least squares estimates
+            % 3rd Order polynimial curve fitting by least squares estimates
             % INPUTS  : (Xin, Yin) : Vector of X and Y coordinates of the points
             % OUTPUTS : PolyCoeff  : a vector of polynimial coefficients
             % --------------------------------------------------------------------------------------------------------------------------------------------------
