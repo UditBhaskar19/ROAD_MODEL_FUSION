@@ -69,12 +69,12 @@ classdef SENSOR_INTERFACE
          % =====================================================================================================================================================
          function [CAMERA_CAN_BUS] = CAM_SENSOR_INTERFACE(CAM1_Sensor_Simulated_Data, ...
                                                           CAM2_Sensor_Simulated_Data, ...
-														  CAM3_Sensor_Simulated_Data, ...
+							  CAM3_Sensor_Simulated_Data, ...
                                                           CAMERA_CAN_BUS, t, nCameras, nMeas)
              % Interface Camera Sensor Data with the Array of Structure
              % INPUT  : CAM1_Sensor_Simulated_Data : Camera 1 simulated measurements
              %          CAM2_Sensor_Simulated_Data : Camera 2 simulated measurements
-			 %          CAM3_Sensor_Simulated_Data : Camera 3 simulated measurements
+             %          CAM3_Sensor_Simulated_Data : Camera 3 simulated measurements
              %          CAMERA_CAN_BUS : init array of structure of camera measurements
              %          t : time index
              %          nCameras : number of cameras
@@ -87,7 +87,7 @@ classdef SENSOR_INTERFACE
                          CAMERA_CAN_BUS = SENSOR_INTERFACE.set_CAMERA_SENSOR_MEAS_DATA(CAM1_Sensor_Simulated_Data, t, snsrIdx, nMeas, CAMERA_CAN_BUS);
                      case 2
                          CAMERA_CAN_BUS = SENSOR_INTERFACE.set_CAMERA_SENSOR_MEAS_DATA(CAM2_Sensor_Simulated_Data, t, snsrIdx, nMeas, CAMERA_CAN_BUS);
-				     case 3
+		     case 3
                          CAMERA_CAN_BUS = SENSOR_INTERFACE.set_CAMERA_SENSOR_MEAS_DATA(CAM3_Sensor_Simulated_Data, t, snsrIdx, nMeas, CAMERA_CAN_BUS);
                      otherwise
                          error('number of CAMERAs exceeds the upper limit');
