@@ -14,7 +14,7 @@ classdef ROAD_MODEL
     methods(Static)
         % ======================================================================================================================================================
         function LineGrid = LANE_LINE_MODEL(LineGridPrev, LineClothoidCoeff, EgoSnsrData, delS, SLimitUpper, SLimitLower, dT)
-		    % Road Grid Computation and History Generation
+            % Road Grid Computation and History Generation
             % INPUT : LineGridPrev : Road Grid data previous t-1
             %         LineClothoidCoeff  : Clothoid coefficient of the ego lane center line estimation at curent time t
             %         EgoSnsrData      : ego sensor data
@@ -111,7 +111,7 @@ classdef ROAD_MODEL
         end
         % ======================================================================================================================================================
         function LaneBoundaryCoeff = LANE_GEOMETRY(LaneBoundaryCoeff_in, EGO_LANE_CENTER, d)
-		    % Lane Geometry Coefficient computation
+	    % Lane Geometry Coefficient computation
             % INPUT : LaneBoundaryCoeff_in : initialized data structure to hold the computed clothoid coefficients.
             %         EGO_LANE_CENTER  : Clothoid coefficient of the ego lane center line estimation at curent time t
             %         d                : parallel distance of the computed curve
@@ -130,7 +130,7 @@ classdef ROAD_MODEL
         end
         % ======================================================================================================================================================
         function EGO_LANE_HYPOTHESIS = EGO_LANE_HYPOTHESIS(EGO_LANE_HYPOTHESIS_in, LANE_BOUNDARY, LaneHalfWidth)
-		    % Ego Lane Center Line Multiple hypotheisied Geometry Coefficient computation
+	    % Ego Lane Center Line Multiple hypotheisied Geometry Coefficient computation
             % INPUT : EGO_LANE_HYPOTHESIS_in : initialized data structure to hold the computed clothoid coefficients.
             %         LANE_BOUNDARY          : Clothoid coefficient of the estimated ego lane boundary lines.
             %         LaneHalfWidth          : ego lane half width
@@ -154,7 +154,7 @@ classdef ROAD_MODEL
         end
         % ======================================================================================================================================================
         function [x0, y0, phi0, K0, K_hat, L] = GenerateLaneHypothesis(a, d)
-		    % Generate parallel line 
+            % Generate parallel line 
             % INPUT : a : clothoid coefficients
             %         d : parallel distance
             % OUTPUT : x0, y0, phi0, K0, K_hat, L   : clothoid coefficients of the parallel curve
@@ -174,11 +174,11 @@ classdef ROAD_MODEL
         end
         % ======================================================================================================================================================
         function EGO_LANE_CENTER = EGO_LANE_PREDICTION(EGO_LANE_CENTER_in, EGO_CAN_BUS, sigmaSq_y0, sigmaSq_a0, sigmaSq_K0, sigmaSq_Khat, dT)
-		    % Ego lane Center Line Prediction
+            % Ego lane Center Line Prediction
             % INPUT : EGO_LANE_CENTER_in : Ego lane Center Line coefficients at previous time t-1
             %         EGO_CAN_BUS : ego sensor data
-			%         sigmaSq_y0, sigmaSq_a0, sigmaSq_K0, sigmaSq_Khat : process noise
-			%         dT : sample time
+	    %         sigmaSq_y0, sigmaSq_a0, sigmaSq_K0, sigmaSq_Khat : process noise
+	    %         dT : sample time
             % OUTPUT : EGO_LANE_CENTER   : Ego lane Center Line predicted coefficients
             % --------------------------------------------------------------------------------------------------------------------------------------------------
             EGO_LANE_CENTER = EGO_LANE_CENTER_in;
@@ -205,10 +205,10 @@ classdef ROAD_MODEL
         end
         % ======================================================================================================================================================
         function EGO_LANE_HYPOTHESIS = EGO_LANE_UPDATE(EGO_LANE_HYPOTHESIS_in, EGO_LANE_CENTER, measmodel)
-		    % Ego lane Center Line Kalman Filter Update
+	    % Ego lane Center Line Kalman Filter Update
             % INPUT : EGO_LANE_HYPOTHESIS_in : data structure to hold the Kalman Filter state updated Ego lane Center Line from different hypothesis (measurement)  
             %         EGO_LANE_CENTER : Ego lane Center Line Prediction
-			%         measmodel : measurement model
+	    %         measmodel : measurement model
             % OUTPUT : EGO_LANE_HYPOTHESIS   : Kalman Filter state updated Ego lane Center Line from different hypothesis 
             % --------------------------------------------------------------------------------------------------------------------------------------------------
             EGO_LANE_HYPOTHESIS = EGO_LANE_HYPOTHESIS_in;
@@ -242,7 +242,7 @@ classdef ROAD_MODEL
         end
         % ======================================================================================================================================================    
         function EGO_LANE_CENTER = EGO_LANE_TRACK_TO_TRACK_FUSION(EGO_LANE_CENTER_in, EGO_LANE_HYPOTHESIS)
-		    % Ego Lane Center Line Hypothesis estimation by multiple hypothesis merge (Track to Track Fusion)
+	    % Ego Lane Center Line Hypothesis estimation by multiple hypothesis merge (Track to Track Fusion)
             % INPUT : EGO_LANE_CENTER_in : data structure to hold the estimated Ego Lane Center Line geometry  
             %         EGO_LANE_HYPOTHESIS : Ego lane Center Line different hypothesised geometry 
             % OUTPUT : EGO_LANE_CENTER   : estimated Ego Lane Center Line geometry
