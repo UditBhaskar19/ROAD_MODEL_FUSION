@@ -36,11 +36,11 @@ classdef CLOTHOID_FUSION
         end
         % ======================================================================================================================================================
         function LANE_TRACK_BOUNDARY = LANE_LINE_FUSION(LANE_TRACK_BOUNDARY_in, ASSIGNMENT_MAT, LANE_LINE_MEAS_MAT, measmodel)
-		    % Lane Boundary Line Measurements To Line Boundary Line Track Fusion
+	    % Lane Boundary Line Measurements To Line Boundary Line Track Fusion
             % INPUT  :    LANE_TRACK_BOUNDARY_in: Predicted Line Coefficients
-			%        :    ASSIGNMENT_MAT : Assignment matrix for the gated line measurements
-			%        :    LANE_LINE_MEAS_MAT : line Measurement Matrix
-			%        :    measmodel : measurement model
+	    %        :    ASSIGNMENT_MAT : Assignment matrix for the gated line measurements
+	    %        :    LANE_LINE_MEAS_MAT : line Measurement Matrix
+	    %        :    measmodel : measurement model
             % OUTPUT :    LANE_TRACK_BOUNDARY: Estimated (fused) lane boundary line coefficients
             % --------------------------------------------------------------------------------------------------------------------------------------------------
             LANE_TRACK_BOUNDARY = LANE_TRACK_BOUNDARY_in;
@@ -75,9 +75,9 @@ classdef CLOTHOID_FUSION
         end
         % ======================================================================================================================================================
         function MergedLine = LANE_LINE_CLOTHOID_STITCH_v0(LaneLineFus, Lpred)
-		    % Clothoid Coefficient after clothoid stitch of largest and second largest curve
+	    % Clothoid Coefficient after clothoid stitch of largest and second largest curve
             % INPUT  :    LaneLineFus: Estimate of lane boundary line
-			%        :    Lpred : length of the estimated line
+	    %        :    Lpred : length of the estimated line
             % OUTPUT :    MergedLine : Coefficient after clothoid stitching
             % --------------------------------------------------------------------------------------------------------------------------------------------------
             MergedLine = struct; MergedLine.x = single(zeros(5,1)); MergedLine.P = single(zeros(4,4));  % init
@@ -133,9 +133,9 @@ classdef CLOTHOID_FUSION
         end
         % ======================================================================================================================================================
         function MergedLine = LANE_LINE_CLOTHOID_STITCH_v1(LaneLineFus, Lpred)
-		    % Clothoid Coefficient after clothoid stitch of largest and second largest curve
+            % Clothoid Coefficient after clothoid stitch of largest and second largest curve
             % INPUT  :    LaneLineFus: Estimate of lane boundary line
-			%        :    Lpred : length of the estimated line
+	    %        :    Lpred : length of the estimated line
             % OUTPUT :    MergedLine : Coefficient after clothoid stitching
             % --------------------------------------------------------------------------------------------------------------------------------------------------
             MergedLine = struct; MergedLine.x = single(zeros(5,1)); MergedLine.P = single(zeros(4,4));  % init
@@ -191,9 +191,9 @@ classdef CLOTHOID_FUSION
         end
         % ======================================================================================================================================================
         function MergedLine = LANE_LINE_CLOTHOID_STITCH_v2(LaneLineFus, Lpred)
-		    % Clothoid Coefficient after clothoid stitch of largest and second largest curve
+	    % Clothoid Coefficient after clothoid stitch of largest and second largest curve
             % INPUT  :    LaneLineFus: Estimate of lane boundary line
-			%        :    Lpred : length of the estimated line
+	    %        :    Lpred : length of the estimated line
             % OUTPUT :    MergedLine : Coefficient after clothoid stitching
             % --------------------------------------------------------------------------------------------------------------------------------------------------
             MergedLine = struct; MergedLine.x = single(zeros(5,1)); MergedLine.P = single(zeros(4,4));  % init
@@ -228,9 +228,9 @@ classdef CLOTHOID_FUSION
         end
         % ======================================================================================================================================================
         function MergedLine = LANE_LINE_CLOTHOID_STITCH_v3(LaneLineFus, Lpred)
-		    % Clothoid Coefficient from PDAF fusion of largest and second largest curve only
+	    % Clothoid Coefficient from PDAF fusion of largest and second largest curve only
             % INPUT  :    LaneLineFus: Estimate of lane boundary line
-			%        :    Lpred : length of the estimated line
+	    %        :    Lpred : length of the estimated line
             % OUTPUT :    MergedLine : Coefficient after clothoid stitching
             % --------------------------------------------------------------------------------------------------------------------------------------------------
             MergedLine = struct; MergedLine.x = single(zeros(5,1)); MergedLine.P = single(zeros(4,4));  % init
@@ -254,9 +254,9 @@ classdef CLOTHOID_FUSION
         end
         % ======================================================================================================================================================
         function LaneLineFus = LANE_LINE_ASSOCIATION(StateUpdate, LogWeights)
-		    % PDAF : Probabilistic Data Association of line Track and gated Line Measurements
+            % PDAF : Probabilistic Data Association of line Track and gated Line Measurements
             % INPUT  :    StateUpdate: Kalman Filter State estimates from Line Measurements
-			%        :    LogWeights : Association log likelihoods
+	    %        :    LogWeights : Association log likelihoods
             % OUTPUT :    LaneLineFus : Coefficient after Lane Line Measurement to Track Association
             % --------------------------------------------------------------------------------------------------------------------------------------------------
             nSeg = size(StateUpdate.x, 2);                              % number of line measurements
@@ -296,9 +296,9 @@ classdef CLOTHOID_FUSION
         function FusedCurveSegment = CurveAssociation(CurvesArray, CurvesErrCovArray,  LogWeights, curvLenEnd)
             % Association by gaussian merge
             % INPUT  :    CurvesArray: An array of KF state updated curves (clothoid coefficients)
-			%        :    CurvesErrCovArray : corresponding error covariance matrix
-			%        :    LogWeights : log likelihood weights
-			%        :    curvLenEnd : maximum overlapped curvelengths of the curves
+	    %        :    CurvesErrCovArray : corresponding error covariance matrix
+	    %        :    LogWeights : log likelihood weights
+	    %        :    curvLenEnd : maximum overlapped curvelengths of the curves
             % OUTPUT :    FusedCurveSegment : fused clothoid coefficients
             % --------------------------------------------------------------------------------------------------------------------------------------------------
             nSeg = size(CurvesArray, 2); nDim = size(CurvesArray, 1);
@@ -384,11 +384,11 @@ classdef CLOTHOID_FUSION
         end
         % ======================================================================================================================================================
         function StateUpdate = KALMAN_FILTER_UPDATE_LANE_LINE(StatePred, StateErrCOV, MeasMat, measmodel)
-		    % Kalman Filter State Update of the Line Track
+            % Kalman Filter State Update of the Line Track
             % INPUT  :    StatePred: Predicted State estimate
-			%        :    StateErrCOV : Error Covariance of the Predicted State estimate
-			%        :    MeasMat : Line Measurements
-			%        :    measmodel : measurement model
+	    %        :    StateErrCOV : Error Covariance of the Predicted State estimate
+	    %        :    MeasMat : Line Measurements
+	    %        :    measmodel : measurement model
             % OUTPUT :    LaneLineFus : Coefficient after Lane Line Measurement to Track Association
             % --------------------------------------------------------------------------------------------------------------------------------------------------
             nMeas = size(MeasMat, 2);
@@ -446,7 +446,7 @@ classdef CLOTHOID_FUSION
             %INPUT: state: a structure with two fields:
             %           x: object state mean (dim x 1 vector) 
             %           P: object state covariance ( dim x dim matrix ) 
-			%          sigmaSq_y0, sigmaSq_a0, sigmaSq_K0, sigmaSq_Khat : process noise
+	    %          sigmaSq_y0, sigmaSq_a0, sigmaSq_K0, sigmaSq_Khat : process noise
             %          dS: distance travelled by the ego vehicle along the arc
             %          dYaw : change in ego vehicle yaw
             %OUTPUT:state_pred: a structure with two fields:
@@ -474,13 +474,13 @@ classdef CLOTHOID_FUSION
         % ======================================================================================================================================================
         function LANE_TRACK_BOUNDARY = NEW_LINE_TRACK(trigger, LANE_LINE_MEAS_MAT, LANE_LINES_CLUSTERS, UNASSOCIATED_CLUSTERS_LINE, ...
                                                       cntLineClst, LANE_TRACK_BOUNDARY)
-			% Initialization of new Lane Boundary Line Track 
+	    % Initialization of new Lane Boundary Line Track 
             % INPUTS : trigger : flag that indicated the system is executed for the first time
             %        : LANE_LINE_MEAS_MAT : Lane Line Measurements
             %        : LANE_LINES_CLUSTERS : Lane Line Clusters
             %        : UNASSOCIATED_CLUSTERS_LINE : Unassociate clusters
-			%        : cntLineClst : count the number of clusters
-			%        : LANE_TRACK_BOUNDARY : Lane Line Track Boundary
+	    %        : cntLineClst : count the number of clusters
+            %        : LANE_TRACK_BOUNDARY : Lane Line Track Boundary
             % OUTPUT : LANE_TRACK_BOUNDARY : New Lane Line Track Updated Lane Line Track Boundary Data structure
             % --------------------------------------------------------------------------------------------------------------------------------------------------											   
             if(~trigger); return; end
@@ -520,10 +520,10 @@ classdef CLOTHOID_FUSION
         end
         % ======================================================================================================================================================
         function[Width, RoadWidth] = ComputeLaneWidth(LANE_TRACK_BOUNDARY)
-		    % Compute Ego Lane Width
+            % Compute Ego Lane Width
             % INPUTS : LANE_TRACK_BOUNDARY : Ego Lane Boundary Line Track
             % OUTPUT : Width : average of the road width
-			%        : RoadWidth : array of road widths at different points
+	    %        : RoadWidth : array of road widths at different points
             % --------------------------------------------------------------------------------------------------------------------------------------------------
             L1 = LANE_TRACK_BOUNDARY.LaneTrackParam(1).ClothoidParam.CurveLength;
             L2 = LANE_TRACK_BOUNDARY.LaneTrackParam(2).ClothoidParam.CurveLength;
